@@ -1,33 +1,30 @@
 # gybsl_doc
 
-## Getting Started
+## 开始
 
-Install dependencies,
+该文档是基于dumi文档工具搭建的
+> dumi官网：https://d.umijs.org/zh-CN
+
+## 安装
+新建一个空文件夹，文件夹名不要有中文和空格这种特殊符号，然后从git上克隆该文档的项目代码 <br/>
+克隆完成后记得 npm i 安装项目依赖
 
 ```bash
 $ npm i
 ```
 
-Start the dev server,
+依赖安装完之后，npm start 启动项目
 
 ```bash
 $ npm start
 ```
 
-Build documentation,
+文档跑起来之后，就可以在doc文件夹底下新建md文件写文档了，如果不知道怎么用可以去dumi的官网看一下 <br/>
+
+如果写好了文档就可以 npm run docs:build 打包了
 
 ```bash
 $ npm run docs:build
 ```
-
-Run test,
-
-```bash
-$ npm test
-```
-
-Build library via `father`,
-
-```bash
-$ npm run build
-```
+我是把文档放到gitee的 gitee page 服务里的 <br/>
+打包完，代码没问题，记得提交代码到git，这样远程仓库的文档才能更新
