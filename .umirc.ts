@@ -8,5 +8,4 @@ export default defineConfig({
   logo: 'https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png',
   outputPath: 'docs-dist',
   mode: "doc",
-  hash: true,
 });

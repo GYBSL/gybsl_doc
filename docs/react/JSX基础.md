@@ -42,7 +42,7 @@ order: 3
             <div className="App">
                 <ul>
                     {
-                        list.map(item => <li key=item.id>item.name</li>)
+                        list.map(item => <li key={item.id}>item.name</li>)
                     }
                 </ul>
             </div>
@@ -71,3 +71,65 @@ order: 3
     }
 
     export default App
+
+## JSX样式处理
+
+行内样式
+
+    function App(){
+        return (
+            <div className="App">
+                <span style={{ color: 'red' }}>Hello world!</span>
+            </div>
+        );
+    }
+
+    export default App
+
+行内样式优化
+
+    const style = {
+        color: '#000000'
+    }
+
+    function App(){
+        return (
+            <div className="App">
+                <span style={ style }>Hello world!</span>
+            </div>
+        );
+    }
+
+    export default App
+
+className类名
+
+    //新建一个.css文件
+    .active{
+        color: red;
+        font-size: 20px;
+    }
+
+    // 引入.css文件
+    import './app.css';
+
+    // 创建一个变量就可以动态控制类名了
+    const classFlag = true;
+
+    function App(){
+        return (
+            <div>
+                <span className={ classFlag ? 'active' : '' }>Hello jsx</span>
+            </div>
+        );
+    }
+
+    export default App
+
+## JSX需要注意的地方
+
+    1、jsx需要并且只能有一个根节点，也可以用<></> (幽灵节点)来当根节点，不会渲染
+    2、所有标签必须形成闭合，成对闭合或者自闭合都可以
+    3、属性命名采用驼峰写法，class -> className , for -> htmlFor
+    4、jsx中如果是多行的话，需要用 () 包裹
+
