@@ -15,14 +15,14 @@ order: 9
     2.普通标签元素
     3.函数
     4.jsx
-
+    
     import React from 'react'
-
+    
     // 解构chidldren
     function Lister({ children }){
         return <div>这是一个组件{children}</div>
     }
-
+    
     class App extends React.Component{
         render()  {
             return(
@@ -30,13 +30,13 @@ order: 9
             )
         }
     }
-
+    
     export default App
 
 **传递多个节点**
 
     import React from "react"
-
+    
     function Listviews({ chialdren }){
         return (
             <>
@@ -46,7 +46,7 @@ order: 9
             </>
         )
     }
-
+    
     class App extends React.Component{
         render(){
             return (
@@ -64,4 +64,4 @@ order: 9
 
 为什么要进行类型校验
 
-> 如果组件接收的类型是一个数组的话，传过去的值是一个其他类型的值就会报错，所以要进行类型校验
+> 如果组件接收的类型是一个数组的话，传过去的值是一个其他类型的值就会报错，所以要进行类型校验  
