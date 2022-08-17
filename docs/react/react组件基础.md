@@ -5,20 +5,22 @@ order: 4
 
 ## 函数组件
 
-    //定义函数组件
-    function Hello(){
-        return (
-            <div>hello react</div>
-        );
-    }
+```js
+//定义函数组件
+function Hello(){
+    return (
+        <div>hello react</div>
+    );
+}
 
-    function App(){
-        return (
-            <Hello></Hello>
-        );
-    }
+function App(){
+    return (
+        <Hello></Hello>
+    );
+}
 
-    export default App
+export default App
+```
 
 **规范：**
 
@@ -30,23 +32,25 @@ order: 4
 
 ## 类组件
 
-    import React from 'react';
+```js
+import React from 'react';
 
-    class Hello extends React.Cmponent{
-        render(){
-            return <div>我是一个类组件</div>
-        }
+class Hello extends React.Cmponent{
+    render(){
+        return <div>我是一个类组件</div>
     }
+}
 
-    function App () {
-        return (
-            <div className="App">
-                <Hello></Hello>
-            </div>
-        )
-    }
+function App () {
+    return (
+        <div className="App">
+            <Hello></Hello>
+        </div>
+    )
+}
 
-    export default App
+export default App
+```
 
 同样是要首字母大写
 

@@ -14,13 +14,14 @@ React 的 CDN引入需要引入 2 个 JS 库文件，即 react 和 react-dom
 
 **2、脚手架方式创建项目**
 
-创建项目 <br/>
-`$ npx create-react-app 项目名`
+创建项目 
 
-启动项目 <br/>
-`$ npm start`
+``$ npx create-react-app`` 项目名`
 
-## 项目目录文件说明
+启动项目 
+
+``$ npm start`` 项目目录文件说明
+
 `src` 存放的是这个项目的核心内容，也就是我们的主要工作区域。其中，index.js文件是和index.html进行关联的文件的唯一接口
 
 `package.json` 配置文件
@@ -29,7 +30,9 @@ React 的 CDN引入需要引入 2 个 JS 库文件，即 react 和 react-dom
 
 `index.html` 项目的入口文件，引用了第三方类库啊，还可以引入cdn
 
-    <div id="root"></div> 是项目的总容器，所有的内容存储在这个容器中。这个容器有且只能有一个。
+```html
+<div id="root"></div> 是项目的总容器，所有的内容存储在这个容器中。这个容器有且只能有一个。
+```
 
 `Robots.txt` 可以对特定网页进行屏蔽
 
@@ -37,15 +40,17 @@ React 的 CDN引入需要引入 2 个 JS 库文件，即 react 和 react-dom
 
 `index.js` 
 
-    ReactDOM.render()的作用是将的内容渲染到根“root”中去。
+```js
+ReactDOM.render()的作用是将的内容渲染到根“root”中去。
 
-    document.getElementById(‘root’)中的"root"便是index.html中的"root"了，便是引用页面内容了。在这里，也可以写一些内容(结构,样式,逻辑)是整个项目的根组件
+document.getElementById(‘root’)中的"root"便是index.html中的"root"了，便是引用页面内容了。在这里，也可以写一些内容(结构,样式,逻辑)是整个项目的根组件
 
-    能够引用的原因是文档内容的头部，有import App from ‘./App’;内容，就是为了将App.js的内容引入到index.js文件中。
+能够引用的原因是文档内容的头部，有import App from ‘./App’;内容，就是为了将App.js的内容引入到index.js文件中。
+```
 
 `App.js`
 
-```import React from 'react';
+```js
 import logo from './logo.svg';
 import './App.css';
 
@@ -73,11 +78,13 @@ function App() {
 export default App;
 ```
 
-    export default App;是为了将App公开，index.js才能够引用.
+```js
+export default App;是为了将App公开，index.js才能够引用.
 
-    return的内容是类似于html结构的内容，就是jsx，jsx语法是react的主要语法。内部的div的className是为了区分html语法的一个类名，这个是div的样式引用。在这个文件中，只能用一个div容器，如果在div的同级目录添加别的内容，便会报错
+return的内容是类似于html结构的内容，就是jsx，jsx语法是react的主要语法。内部的div的className是为了区分html语法的一个类名，这个是div的样式引用。在这个文件中，只能用一个div容器，如果在div的同级目录添加别的内容，便会报错
 
-    className=“App”，是引用到App.css的样式。注意，页面内容样式是就近原则，首先用App.css的样式，App.css是组件的样式，index.css是全局的样式。
+className=“App”，是引用到App.css的样式。注意，页面内容样式是就近原则，首先用App.css的样式，App.css是组件的样式，index.css是全局的样式。
+```
 
 ## package.json配置信息详解
 **1、name字段**
@@ -90,12 +97,14 @@ export default App;
 
 **3、private字段**
 
-发布配置 `"private": true` <br/>
+发布配置 `"private": true` 
+
 *"private": true在package.json中设置，那么npm将拒绝发布它。这是一种防止意外发布私有存储库的方法。*
 
 **4、dependencies字段**
 
-dependencies字段指定了项目运行所依赖的模块 <br/>
+dependencies字段指定了项目运行所依赖的模块 
+
 *latest：安装最新版本*
 
 **5、scripts字段**
@@ -105,7 +114,7 @@ scripts 指定了运行脚本命令的 npm 命令行缩写，比如 start 指定
 **5、eslintConfig字段**
 
 Eslint配置
-```
+```js
 "eslintConfig": {
     "extends": "react-app",
     "rules":{
@@ -116,13 +125,15 @@ Eslint配置
 
 上面代码，配置了不让输出，否则会warning。
 
-*“off” 或者 0：关闭规则* <br/>
-*“warn” 或者 1：打开规则，并且作为一个警告（不影响exit code）* <br/>
+*“off” 或者 0：关闭规则* 
+
+*“warn” 或者 1：打开规则，并且作为一个警告（不影响exit code）*
+
 *“error” 或者 2：打开规则，并且作为一个错误（exit code将会是1）*
 
 **6、browserslist字段**
 
-```dotnetcli
+```json
 "browserslist": {
     "production": [
         ">0.2%",
