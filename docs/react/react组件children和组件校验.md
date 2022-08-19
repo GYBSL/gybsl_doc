@@ -99,12 +99,12 @@ const List = props => {
 
 List.propTypes = {
   colors: PropTypes.array
-}
+} 
 ```
 
 
 
-## props校验常用规则
+## props校验常用规则     
 
 
 
