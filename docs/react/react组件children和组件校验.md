@@ -3,13 +3,13 @@ title: 组件children和props类型校验
 order: 9
 ---
 
-## 组件children
+## 组件 children
 
-**children属性**
+**children 属性**
 
-表示该组件的子节点，只要组件内部有子节点，props中就有该属性
+表示该组件的子节点，只要组件内部有子节点，props 中就有该属性
 
-其中children中可以传递：
+其中 children 中可以传递：
 
 ```js
 1.普通文本
@@ -38,33 +38,32 @@ export default App
 **传递多个节点**
 
 ```js
-import React from "react"
+import React from 'react';
 
-function Listviews({ chialdren }){
-    return (
-        <>
-            {
-                children.map(item => item) // 通过map遍历传过来的children
-            }
-        </>
-    )
+function Listviews({ chialdren }) {
+  return (
+    <>
+      {
+        children.map((item) => item) // 通过map遍历传过来的children
+      }
+    </>
+  );
 }
 
-class App extends React.Component{
-    render(){
-        return (
-            <Listview>
-            // 传多个节点
-                <p>这是一个p标签</p>
-                <span>这是一个span标签</span>
-            </Listview>
-        )
-    }
+class App extends React.Component {
+  render() {
+    return (
+      <Listview>
+        // 传多个节点
+        <p>这是一个p标签</p>
+        <span>这是一个span标签</span>
+      </Listview>
+    );
+  }
 }
 ```
 
-
-## props类型校验
+## props 类型校验
 
 为什么要进行类型校验
 
@@ -74,45 +73,28 @@ class App extends React.Component{
 
 1、安装并引入第三方库包文件
 
-​	``npm`` 方式：  ``npm i prop-types``
+​ `npm` 方式： `npm i prop-types`
 
-​	``yarn`` 方式：``yarn add prop-types``
-
-
+​ `yarn` 方式：`yarn add prop-types`
 
 2、导入`prop-types` 包
 
-​	``import PropTypes from 'prop-types'``
-
-
+​ `import PropTypes from 'prop-types'`
 
 3、使用 `组件名.propTypes = {}` 给组件添加校验规则
 
 ```js
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-const List = props => {
-  const arr = props.colors
-  const lis = arr.map((item, index) => <li key={index}>{item.name}</li>)
-  return <ul>{lis}</ul>
-}
+const List = (props) => {
+  const arr = props.colors;
+  const lis = arr.map((item, index) => <li key={index}>{item.name}</li>);
+  return <ul>{lis}</ul>;
+};
 
 List.propTypes = {
-  colors: PropTypes.array
-} 
+  colors: PropTypes.array,
+};
 ```
 
-
-
-## props校验常用规则     
-
-
-
-
-
-
-
-
-
-
-
+## props 校验常用规则
