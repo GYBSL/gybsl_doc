@@ -56,4 +56,4 @@ export default App
 
 继承 React.Component 父类，从而使用父类中提供的方法或属性
 
-类组件必须提供 render 方法 render 方法必须有返回值，表示该组件的 UI 结构
+类组件必须提供 render 方法 render 方法必须有返回值，表示该组件的 UI 结构 
