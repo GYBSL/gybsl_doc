@@ -117,3 +117,22 @@ optionalObjectWithShape: PropTypes.shape({
 ```
 
 官网文档相关链接：https://reactjs.org/docs/typechecking-with-proptypes.html
+
+## props校验默认值
+
+给props设置默认值的方法：
+
+1、直接在接收props解构赋值时设置默认值
+
+```js
+function List({pageSize = 10}) {
+  return (
+    <div>
+      此处展示props的默认值：{ pageSize }
+    </div>
+  )
+}
+
+// 不传入pageSize属性
+<List />
+```
