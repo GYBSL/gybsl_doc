@@ -115,3 +115,5 @@ optionalObjectWithShape: PropTypes.shape({
   fontSize: PropTypes.number
 })
 ```
+
+官网文档相关链接：https://reactjs.org/docs/typechecking-with-proptypes.html
