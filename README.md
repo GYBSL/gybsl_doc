@@ -5,6 +5,11 @@
 该文档是基于dumi文档工具搭建的
 > dumi官网：https://d.umijs.org/zh-CN
 
+
+本文档是一个react的学习笔记，记录react基础的相关知识
+
+本文档用到的参考文档：https://www.yuque.com/fechaichai/qeamqf/xbai87
+
 ## 安装
 新建一个空文件夹，文件夹名不要有中文和空格这种特殊符号，然后从git上克隆该文档的项目代码
 
@@ -20,7 +25,7 @@ $ npm i
 $ npm start
 ```
 
-文档跑起来之后，就可以在doc文件夹底下新建md文件写文档了，如果不知道怎么用可以去dumi的官网看一下
+文档跑起来之后，就可以在doc文件夹底下新建md文件写文档了，如果想了解更多dumi的使用可以去dumi的官网查看详细文档
 
 npm run docs:build 打包生成自己的文档
 
