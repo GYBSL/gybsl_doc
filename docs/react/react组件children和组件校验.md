@@ -99,9 +99,19 @@ List.propTypes = {
 
 ## props 校验常用规则
 
+  1. 常见类型：array、bool、func、number、object、string
+  2. React元素类型：element
+  3. 必填项：isRequired
+  4. 特定的结构对象：shape({})
 
-
-
-
-
-
+```js
+// 常见类型
+optionalFunc: PropTypes.func,
+// 必填 只需要在类型后面串联一个isRequired
+requiredFunc: PropTypes.func.isRequired,
+// 特定结构的对象
+optionalObjectWithShape: PropTypes.shape({
+  color: PropTypes.string,
+  fontSize: PropTypes.number
+})
+```
