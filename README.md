@@ -27,6 +27,7 @@ npm run docs:build 打包生成自己的文档
 ```bash
 $ npm run docs:build
 ```
-我是把文档放到gitee的 gitee page 服务里的
 
-打包完，代码没问题，记得提交代码到git，这样远程仓库的文档才能更新
+文档部署线上的话，建议用 gitee page 服务部署，或者你有自己的服务器 域名部署到自己的服务器也行
+
+我是把文档放到gitee的 gitee page 服务里的
