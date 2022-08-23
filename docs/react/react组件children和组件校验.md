@@ -73,13 +73,13 @@ class App extends React.Component {
 
 1、安装并引入第三方库包文件
 
-​ `npm` 方式： `npm i prop-types`
+ `npm` 方式： `npm i prop-types`
 
-​ `yarn` 方式：`yarn add prop-types`
+ `yarn` 方式：`yarn add prop-types`
 
 2、导入`prop-types` 包
 
-​ `import PropTypes from 'prop-types'`
+ `import PropTypes from 'prop-types'`
 
 3、使用 `组件名.propTypes = {}` 给组件添加校验规则
 
@@ -98,3 +98,10 @@ List.propTypes = {
 ```
 
 ## props 校验常用规则
+
+
+
+
+
+
+
