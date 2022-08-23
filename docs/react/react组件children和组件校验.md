@@ -122,7 +122,7 @@ optionalObjectWithShape: PropTypes.shape({
 
 给props设置默认值的方法：
 
-1、直接在接收props解构赋值时设置默认值
+1、函数组件中可以直接在接收props解构赋值时设置默认值
 
 ```js
 function List({pageSize = 10}) {
@@ -134,5 +134,23 @@ function List({pageSize = 10}) {
 }
 
 // 不传入pageSize属性
+<List />
+```
+
+2、类组件中使用静态属性声明默认值 static defaultProps = {}
+
+```js
+class List extends Component {
+  static defaultProps = {
+    pageSize: 10
+  }
+  render() {
+    return (
+      <div>
+        此处展示props的默认值：{this.props.pageSize}
+      </div>
+    )
+  }
+}
 <List />
 ```
