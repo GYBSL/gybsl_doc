@@ -12,4 +12,4 @@ order: 10
 官网生命周期图解：https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 ![图解](../../public/images/life.png)
-     
+      
