@@ -7,9 +7,7 @@ order: 1
 
 **一个专注于构建用户界面的 JavaScript 库，和 vue 和 angular 并称前端三大框架**
 
-<div>
-	<img src="../../public/images/react_jj.png" width="50%" />
-</div>
+![](https://raw.githubusercontent.com/GYBSL/ImageUpload/main/image/react_jj.png)
 
 > React 英文文档：https://reactjs.org/
 
@@ -21,10 +19,9 @@ order: 1
 
 > 声明式的意思就是写页面 UI 可以跟写 HTML 一样，抛弃了命令式的繁琐
 
-<div>
-	<img src='../../public/images/react_1.png' width='50%'/>
-	<img src='../../public/images/react_2.png' width='50%'/>
-</div>
+![](https://raw.githubusercontent.com/GYBSL/ImageUpload/main/image/react_2.png)
+
+![](https://raw.githubusercontent.com/GYBSL/ImageUpload/main/image/react_1.png)
 
 **2、组件化**
 
