@@ -28455,7 +28455,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"*":[{"path":"/","title":"React \u5b66\u4e60\u6587\u6863","meta":{}},{"title":"React","path":"/react","meta":{},"children":[{"path":"/react/react\u6846\u67b6\u4ecb\u7ecd","title":"React\u7b80\u4ecb","meta":{"order":1}},{"path":"/react/react\u5b89\u88c5\u4f7f\u7528","title":"React\u5b89\u88c5","meta":{"order":2}},{"path":"/react/jsx\u57fa\u7840","title":"JSX\u57fa\u7840","meta":{"order":3}},{"path":"/react/react\u7ec4\u4ef6\u57fa\u7840","title":"react\u7ec4\u4ef6\u57fa\u7840","meta":{"order":4}},{"path":"/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","title":"\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","meta":{"order":5}},{"path":"/react/\u7ec4\u4ef6\u7684\u72b6\u6001","title":"\u7ec4\u4ef6\u72b6\u6001","meta":{"order":6}},{"path":"/react/\u8868\u5355\u5904\u7406","title":"\u8868\u5355\u5904\u7406\u548cref","meta":{"order":7}},{"path":"/react/react\u7ec4\u4ef6\u901a\u4fe1","title":"react\u7ec4\u4ef6\u901a\u4fe1","meta":{"order":8}},{"path":"/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c","title":"\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c","meta":{"order":9}},{"path":"/react/react\u751f\u547d\u5468\u671f","title":"react\u751f\u547d\u5468\u671f","meta":{"order":10}}]},{"title":"RN\u5f00\u53d1","path":"/rn\u5f00\u53d1","meta":{},"children":[{"path":"/rn\u5f00\u53d1/rn","title":"react-native","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"\u5f00\u53d1\u6587\u6863","logo":"https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png","description":"\u4e00\u4e9b\u5c0f\u95ee\u9898\u4f1a\u66f4\u65b0\u5230\u6587\u6863\u4e2d","mode":"doc","repository":{"url":"","branch":"master"},"theme":{}}',
+      '{"menus":{"en-US":{"*":[{"path":"/","title":"React \u5b66\u4e60\u6587\u6863","meta":{}},{"title":"React","path":"/react","meta":{},"children":[{"path":"/react/react\u6846\u67b6\u4ecb\u7ecd.html","title":"React\u7b80\u4ecb","meta":{"order":1}},{"path":"/react/react\u5b89\u88c5\u4f7f\u7528.html","title":"React\u5b89\u88c5","meta":{"order":2}},{"path":"/react/jsx\u57fa\u7840.html","title":"JSX\u57fa\u7840","meta":{"order":3}},{"path":"/react/react\u7ec4\u4ef6\u57fa\u7840.html","title":"react\u7ec4\u4ef6\u57fa\u7840","meta":{"order":4}},{"path":"/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a.html","title":"\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","meta":{"order":5}},{"path":"/react/\u7ec4\u4ef6\u7684\u72b6\u6001.html","title":"\u7ec4\u4ef6\u72b6\u6001","meta":{"order":6}},{"path":"/react/\u8868\u5355\u5904\u7406.html","title":"\u8868\u5355\u5904\u7406\u548cref","meta":{"order":7}},{"path":"/react/react\u7ec4\u4ef6\u901a\u4fe1.html","title":"react\u7ec4\u4ef6\u901a\u4fe1","meta":{"order":8}},{"path":"/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c.html","title":"\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c","meta":{"order":9}},{"path":"/react/react\u751f\u547d\u5468\u671f.html","title":"react\u751f\u547d\u5468\u671f","meta":{"order":10}}]},{"title":"RN\u5f00\u53d1","path":"/rn\u5f00\u53d1","meta":{},"children":[{"path":"/rn\u5f00\u53d1/rn.html","title":"react-native","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"\u5f00\u53d1\u6587\u6863","logo":"https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png","description":"\u4e00\u4e9b\u5c0f\u95ee\u9898\u4f1a\u66f4\u65b0\u5230\u6587\u6863\u4e2d","mode":"doc","repository":{"url":"","branch":"master"},"theme":{},"exportStatic":{"htmlSuffix":true}}',
     );
   },
   qA1w: function (e, t, n) {
@@ -30104,7 +30104,7 @@
     function d() {
       var e = [
         {
-          path: '/~demos/:uuid',
+          path: '/~demos/:uuid.html',
           layout: !1,
           wrappers: [n('afA6').default],
           component: (e) => {
@@ -30169,7 +30169,7 @@
               title: 'React \u5b66\u4e60\u6587\u6863 - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/jsx\u57fa\u7840',
+              path: '/react/jsx\u57fa\u7840.html',
               component: n('fDuF').default,
               exact: !0,
               meta: {
@@ -30210,7 +30210,7 @@
               title: 'JSX\u57fa\u7840 - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/react\u5b89\u88c5\u4f7f\u7528',
+              path: '/react/react\u5b89\u88c5\u4f7f\u7528.html',
               component: n('19Ay').default,
               exact: !0,
               meta: {
@@ -30235,7 +30235,7 @@
               title: 'React\u5b89\u88c5 - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/react\u6846\u67b6\u4ecb\u7ecd',
+              path: '/react/react\u6846\u67b6\u4ecb\u7ecd.html',
               component: n('KBK2').default,
               exact: !0,
               meta: {
@@ -30252,7 +30252,7 @@
               title: 'React\u7b80\u4ecb - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/react\u751f\u547d\u5468\u671f',
+              path: '/react/react\u751f\u547d\u5468\u671f.html',
               component: n('6HRa').default,
               exact: !0,
               meta: {
@@ -30277,7 +30277,7 @@
               title: 'react\u751f\u547d\u5468\u671f - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c',
+              path: '/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c.html',
               component: n('Dbla').default,
               exact: !0,
               meta: {
@@ -30309,7 +30309,7 @@
                 '\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/react\u7ec4\u4ef6\u57fa\u7840',
+              path: '/react/react\u7ec4\u4ef6\u57fa\u7840.html',
               component: n('TU7N').default,
               exact: !0,
               meta: {
@@ -30330,7 +30330,7 @@
               title: 'react\u7ec4\u4ef6\u57fa\u7840 - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/react\u7ec4\u4ef6\u901a\u4fe1',
+              path: '/react/react\u7ec4\u4ef6\u901a\u4fe1.html',
               component: n('EoXt').default,
               exact: !0,
               meta: {
@@ -30370,7 +30370,7 @@
               title: 'react\u7ec4\u4ef6\u901a\u4fe1 - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a',
+              path: '/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a.html',
               component: n('I+2O').default,
               exact: !0,
               meta: {
@@ -30395,7 +30395,7 @@
               title: '\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/\u7ec4\u4ef6\u7684\u72b6\u6001',
+              path: '/react/\u7ec4\u4ef6\u7684\u72b6\u6001.html',
               component: n('XMpy').default,
               exact: !0,
               meta: {
@@ -30420,7 +30420,7 @@
               title: '\u7ec4\u4ef6\u72b6\u6001 - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react/\u8868\u5355\u5904\u7406',
+              path: '/react/\u8868\u5355\u5904\u7406.html',
               component: n('y5QX').default,
               exact: !0,
               meta: {
@@ -30445,7 +30445,7 @@
               title: '\u8868\u5355\u5904\u7406\u548cref - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/rn\u5f00\u53d1/rn',
+              path: '/rn\u5f00\u53d1/rn.html',
               component: n('xLYM').default,
               exact: !0,
               meta: {
@@ -30465,12 +30465,12 @@
               title: 'react-native - \u5f00\u53d1\u6587\u6863',
             },
             {
-              path: '/react',
+              path: '/react.html',
               meta: {},
               exact: !0,
               redirect: '/react/react\u6846\u67b6\u4ecb\u7ecd',
             },
-            { path: '/rn\u5f00\u53d1', meta: {}, exact: !0, redirect: '/rn\u5f00\u53d1/rn' },
+            { path: '/rn\u5f00\u53d1.html', meta: {}, exact: !0, redirect: '/rn\u5f00\u53d1/rn' },
           ],
           title: '\u5f00\u53d1\u6587\u6863',
           component: (e) => e.children,
