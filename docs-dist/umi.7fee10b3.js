@@ -7063,10 +7063,10 @@
     var r = n('YS25'),
       o = { basename: '/' };
     window.routerBase && (o.basename = window.routerBase);
-    var a = Object({ NODE_ENV: 'production' }).__IS_SERVER ? null : Object(r['a'])(o),
+    var a = Object({ NODE_ENV: 'production' }).__IS_SERVER ? null : Object(r['b'])(o),
       i = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e || (a = Object(r['a'])(o)), a;
+        return e || (a = Object(r['b'])(o)), a;
       };
   },
   Fs9M: function (e, t, n) {
@@ -28455,7 +28455,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"*":[{"path":"/","title":"React \u5b66\u4e60\u6587\u6863","meta":{}},{"title":"React","path":"/react","meta":{},"children":[{"path":"/react/react\u6846\u67b6\u4ecb\u7ecd","title":"React\u7b80\u4ecb","meta":{"order":1}},{"path":"/react/react\u5b89\u88c5\u4f7f\u7528","title":"React\u5b89\u88c5","meta":{"order":2}},{"path":"/react/jsx\u57fa\u7840","title":"JSX\u57fa\u7840","meta":{"order":3}},{"path":"/react/react\u7ec4\u4ef6\u57fa\u7840","title":"react\u7ec4\u4ef6\u57fa\u7840","meta":{"order":4}},{"path":"/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","title":"\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","meta":{"order":5}},{"path":"/react/\u7ec4\u4ef6\u7684\u72b6\u6001","title":"\u7ec4\u4ef6\u72b6\u6001","meta":{"order":6}},{"path":"/react/\u8868\u5355\u5904\u7406","title":"\u8868\u5355\u5904\u7406\u548cref","meta":{"order":7}},{"path":"/react/react\u7ec4\u4ef6\u901a\u4fe1","title":"react\u7ec4\u4ef6\u901a\u4fe1","meta":{"order":8}},{"path":"/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c","title":"\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c","meta":{"order":9}},{"path":"/react/react\u751f\u547d\u5468\u671f","title":"react\u751f\u547d\u5468\u671f","meta":{"order":10}}]},{"title":"RN\u5f00\u53d1","path":"/rn\u5f00\u53d1","meta":{},"children":[{"path":"/rn\u5f00\u53d1/rn","title":"react-native","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"\u5f00\u53d1\u6587\u6863","logo":"https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png","description":"\u4e00\u4e9b\u5c0f\u95ee\u9898\u4f1a\u66f4\u65b0\u5230\u6587\u6863\u4e2d","mode":"doc","repository":{"url":"","branch":"master"},"theme":{},"exportStatic":{}}',
+      '{"menus":{"en-US":{"*":[{"path":"/","title":"React \u5b66\u4e60\u6587\u6863","meta":{}},{"title":"React","path":"/react","meta":{},"children":[{"path":"/react/react\u6846\u67b6\u4ecb\u7ecd","title":"React\u7b80\u4ecb","meta":{"order":1}},{"path":"/react/react\u5b89\u88c5\u4f7f\u7528","title":"React\u5b89\u88c5","meta":{"order":2}},{"path":"/react/jsx\u57fa\u7840","title":"JSX\u57fa\u7840","meta":{"order":3}},{"path":"/react/react\u7ec4\u4ef6\u57fa\u7840","title":"react\u7ec4\u4ef6\u57fa\u7840","meta":{"order":4}},{"path":"/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","title":"\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a","meta":{"order":5}},{"path":"/react/\u7ec4\u4ef6\u7684\u72b6\u6001","title":"\u7ec4\u4ef6\u72b6\u6001","meta":{"order":6}},{"path":"/react/\u8868\u5355\u5904\u7406","title":"\u8868\u5355\u5904\u7406\u548cref","meta":{"order":7}},{"path":"/react/react\u7ec4\u4ef6\u901a\u4fe1","title":"react\u7ec4\u4ef6\u901a\u4fe1","meta":{"order":8}},{"path":"/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c","title":"\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c","meta":{"order":9}},{"path":"/react/react\u751f\u547d\u5468\u671f","title":"react\u751f\u547d\u5468\u671f","meta":{"order":10}}]},{"title":"RN\u5f00\u53d1","path":"/rn\u5f00\u53d1","meta":{},"children":[{"path":"/rn\u5f00\u53d1/rn","title":"react-native","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"React\u6587\u6863","logo":"https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png","description":"\u4e00\u4e9b\u5c0f\u95ee\u9898\u4f1a\u66f4\u65b0\u5230\u6587\u6863\u4e2d","mode":"doc","repository":{"url":"","branch":"master"},"theme":{},"exportStatic":{}}',
     );
   },
   qA1w: function (e, t, n) {
@@ -30166,7 +30166,7 @@
                 ],
                 title: 'React \u5b66\u4e60\u6587\u6863',
               },
-              title: 'React \u5b66\u4e60\u6587\u6863 - \u5f00\u53d1\u6587\u6863',
+              title: 'React \u5b66\u4e60\u6587\u6863 - React\u6587\u6863',
             },
             {
               path: '/react/jsx\u57fa\u7840',
@@ -30207,7 +30207,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: 'JSX\u57fa\u7840 - \u5f00\u53d1\u6587\u6863',
+              title: 'JSX\u57fa\u7840 - React\u6587\u6863',
             },
             {
               path: '/react/react\u5b89\u88c5\u4f7f\u7528',
@@ -30232,7 +30232,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: 'React\u5b89\u88c5 - \u5f00\u53d1\u6587\u6863',
+              title: 'React\u5b89\u88c5 - React\u6587\u6863',
             },
             {
               path: '/react/react\u6846\u67b6\u4ecb\u7ecd',
@@ -30249,7 +30249,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: 'React\u7b80\u4ecb - \u5f00\u53d1\u6587\u6863',
+              title: 'React\u7b80\u4ecb - React\u6587\u6863',
             },
             {
               path: '/react/react\u751f\u547d\u5468\u671f',
@@ -30274,7 +30274,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: 'react\u751f\u547d\u5468\u671f - \u5f00\u53d1\u6587\u6863',
+              title: 'react\u751f\u547d\u5468\u671f - React\u6587\u6863',
             },
             {
               path: '/react/react\u7ec4\u4ef6children\u548c\u7ec4\u4ef6\u6821\u9a8c',
@@ -30305,8 +30305,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title:
-                '\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c - \u5f00\u53d1\u6587\u6863',
+              title: '\u7ec4\u4ef6children\u548cprops\u7c7b\u578b\u6821\u9a8c - React\u6587\u6863',
             },
             {
               path: '/react/react\u7ec4\u4ef6\u57fa\u7840',
@@ -30327,7 +30326,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: 'react\u7ec4\u4ef6\u57fa\u7840 - \u5f00\u53d1\u6587\u6863',
+              title: 'react\u7ec4\u4ef6\u57fa\u7840 - React\u6587\u6863',
             },
             {
               path: '/react/react\u7ec4\u4ef6\u901a\u4fe1',
@@ -30367,7 +30366,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: 'react\u7ec4\u4ef6\u901a\u4fe1 - \u5f00\u53d1\u6587\u6863',
+              title: 'react\u7ec4\u4ef6\u901a\u4fe1 - React\u6587\u6863',
             },
             {
               path: '/react/\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a',
@@ -30392,7 +30391,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: '\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a - \u5f00\u53d1\u6587\u6863',
+              title: '\u7ec4\u4ef6\u7684\u4e8b\u4ef6\u7ed1\u5b9a - React\u6587\u6863',
             },
             {
               path: '/react/\u7ec4\u4ef6\u7684\u72b6\u6001',
@@ -30417,7 +30416,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: '\u7ec4\u4ef6\u72b6\u6001 - \u5f00\u53d1\u6587\u6863',
+              title: '\u7ec4\u4ef6\u72b6\u6001 - React\u6587\u6863',
             },
             {
               path: '/react/\u8868\u5355\u5904\u7406',
@@ -30442,7 +30441,7 @@
                 ],
                 group: { path: '/react', title: 'React' },
               },
-              title: '\u8868\u5355\u5904\u7406\u548cref - \u5f00\u53d1\u6587\u6863',
+              title: '\u8868\u5355\u5904\u7406\u548cref - React\u6587\u6863',
             },
             {
               path: '/rn\u5f00\u53d1/rn',
@@ -30462,7 +30461,7 @@
                 title: 'react-native',
                 group: { path: '/rn\u5f00\u53d1', title: 'RN\u5f00\u53d1' },
               },
-              title: 'react-native - \u5f00\u53d1\u6587\u6863',
+              title: 'react-native - React\u6587\u6863',
             },
             {
               path: '/react',
@@ -30472,7 +30471,7 @@
             },
             { path: '/rn\u5f00\u53d1', meta: {}, exact: !0, redirect: '/rn\u5f00\u53d1/rn' },
           ],
-          title: '\u5f00\u53d1\u6587\u6863',
+          title: 'React\u6587\u6863',
           component: (e) => e.children,
         },
       ];
@@ -30500,7 +30499,7 @@
                 history: Object(o['a'])(e.hot),
                 isServer: Object({ NODE_ENV: 'production' }).__IS_SERVER,
                 rootElement: 'root',
-                defaultTitle: '\u5f00\u53d1\u6587\u6863',
+                defaultTitle: 'React\u6587\u6863',
               },
             });
             return Object(i['renderClient'])(t);
