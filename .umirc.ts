@@ -3,8 +3,8 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   title: 'React文档',
   description: 'React学习文档',
-  favicon: 'https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png',
-  logo: 'https://portrait.gitee.com/uploads/avatars/user/3440/10321374_gybsl_1641986311.png',
+  favicon: 'https://gitee.com/gybsl/image-upload/raw/master/image_docs/gybsl.png',
+  logo: 'https://gitee.com/gybsl/image-upload/raw/master/image_docs/gybsl.png',
   outputPath: 'docs-dist',
   mode: 'doc',
   hash: true,
