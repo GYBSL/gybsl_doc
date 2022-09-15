@@ -50,3 +50,59 @@ componentDidMount(): 组件挂载（完成DOM渲染）后执行，初始化的�
 ```
 
 ## 生命周期 - 更新阶段
+
+> 每当组件的 state 或 props 发生变化时，组件就会更新。
+>
+> 当组件的 props 或 state 发生变化时会触发更新。
+
+组件更新阶段的钩子函数：
+
+**getDerivedStateFromProps**
+
+```js
+getDerivedStateFromProps(): 在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。
+
+根据 shouldComponentUpdate() 的返回值，判断 React 组件的输出是否受当前 state 或 props 更改的影响。
+```
+
+**shouldComponentUpdate**
+
+```js
+shouldComponentUpdate():当 props 或 state 发生变化时，shouldComponentUpdate() 会在render渲染执行之前被调用。
+
+会返回一个布尔值，指定 React 是否应该继续渲染，默认值是 true， 即 state 每次发生变化组件都会重新渲染。
+
+shouldComponentUpdate() 的返回值用于判断 React 组件的输出是否受当前 state 或 props 更改的影响，当 props 或 state 发生变化时，shouldComponentUpdate() 会在渲染执行之前被调用。
+```
+
+**render**
+
+```js
+每次组件渲染都会触发;
+```
+
+**getSnapshotBeforeUpdate**
+
+```js
+getSnapshotBeforeUpdate(): 在最近一次渲染输出（提交到 DOM 节点）之前调用。
+
+在 getSnapshotBeforeUpdate() 方法中，我们可以访问更新前的 props 和 state。
+
+getSnapshotBeforeUpdate() 方法需要与 componentDidUpdate() 方法一起使用，否则会出现错误。
+```
+
+**componentDidUpdate**
+
+```js
+componentDidUpdate(): 组件更新后（DOM渲染完毕）
+
+作用：DOM操作，可以获取到更新后的DOM内容，不要直接调用setState
+```
+
+## 生命周期 - 卸载阶段
+
+**componentWillUnmount**
+
+```js
+componentWillUnmount(): 组件卸载, 执行清理工作（比如：清理定时器等）
+```
