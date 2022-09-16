@@ -34,24 +34,80 @@ Hook 就是 Javascript 函数，使用它们时有两个额外的规则：
 
 ## useState
 
-`useState` 用于在函数组件中调用给组件添加一些内部状态 state，正常情况下纯函数不能存在状态副作用，通过调用该 Hook 函数可以给函数组件注入状态 state
+> 作用：useState 为函数组件提供状态（state）
 
-`useState` 唯一的参数就是初始 state，会返回当前状态和一个状态更新函数，并且 `useState` 返回的状态更新函数不会把新的 state 和旧的 state 进行合并，如需合并可使用 ES6 的对象结构语法进行手动合并
+**使用步骤**
 
-**useState 方法使用**
+1. 导入 useState 函数
+2. 调用 useState 函数，并传入状态的初始值
+3. 从 useState 函数的返回值中，拿到状态和修改状态的方法
+4. 在 JSX 中展示状态
+5. 调用修改状态的方法更新状态
+
+**状态的读取和修改**
+
+读取状态
+
+    该方式提供的状态，是函数内部的局部变量，可以在函数内的任意位置使用
+
+修改状态
+
+1. setCount 是一个函数，参数表示最新的状态值
+2. 调用该函数后，将使用新值替换旧值
+3. 修改状态后，由于状态发生变化，会引起视图变化
+
+注意事项
+
+    修改状态的时候，一定要使用新的状态替换旧的状态，不能直接修改旧的状态，尤其是引用类型
+
+**组件的更新过程**
+
+函数组件使用 useState hook 后的执行过程，以及状态值的变化
+
+- 组件第一次渲染
+
+  1. 从头开始执行该组件中的代码逻辑
+  2. 调用 `useState(0)` 将传入的参数作为状态初始值，即：0
+  3. 渲染组件，此时，获取到的状态 count 值为： 0
+
+- 组件第二次渲染
+
+  1. 点击按钮，调用 `setCount(count + 1)` 修改状态，因为状态发生改变，所以，该组件会重新渲染
+  2. 组件重新渲染时，会再次执行该组件中的代码逻辑
+  3. 再次调用 `useState(0)`，此时 React 内部会拿到最新的状态值而非初始值，比如，该案例中最新的状态值为 1
+  4. 再次渲染组件，此时，获取到的状态 count 值为：1
 
 ```js
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-function Example() {
-  // 声明一个新的叫做 “count” 的 state 变量
+function App() {
   const [count, setCount] = useState(0);
-
+  // 在这里可以进行打印测试
+  console.log(count);
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
+    <button
+      onClick={() => {
+        setCount(count + 1);
+      }}
+    >
+      {count}
+    </button>
   );
+}
+export default App;
+```
+
+注意：useState 的初始值(参数)只会在组件第一次渲染时生效。也就是说，以后的每次渲染，useState 获取到都是最新的状态值，React 组件会记住每次最新的状态值
+
+**使用规则**
+
+useState 函数可以执行多次，每次执行互相独立，每调用一次为函数组件提供一个状态
+
+```js
+function List() {
+  // 以字符串为初始值
+  const [name, setName] = useState('cp');
+  // 以数组为初始值
+  const [list, setList] = useState([]);
 }
 ```
