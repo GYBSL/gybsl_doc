@@ -111,3 +111,24 @@ function List() {
   const [list, setList] = useState([]);
 }
 ```
+
+useState 注意事项
+
+1. 只能出现在函数组件或者其他 hook 函数中
+2. 不能嵌套在 if/for/其它函数中（react 按照 hooks 的调用顺序识别每一个 hook）
+3. 可以通过开发者工具查看 hooks 状态
+
+```js
+//错误示范
+let num = 1;
+function List() {
+  num++;
+  if (num / 2 === 0) {
+    const [name, setName] = useState('cp');
+  }
+  const [list, setList] = useState([]);
+}
+// 俩个hook的顺序不是固定的，这是不可以的！！！
+```
+
+## useEffect
