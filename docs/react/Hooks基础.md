@@ -132,3 +132,146 @@ function List() {
 ```
 
 ## useEffect
+
+**1. 理解函数副作用**
+
+什么是副作用：
+
+> 副作用是相对于主作用来说的，一个函数除了主作用，其他的作用就是副作用。对于 React 组件来说，主作用就是根据数据（state/props）渲染 UI，除此之外都是副作用（比如，手动修改 DOM）
+
+常见的副作用
+
+1. 数据请求 ajax 发送
+2. 手动修改 dom
+3. localstorage 操作
+
+`useEffect` 函数的作用就是为 react 函数组件提供副作用处理的！
+
+**2. 基础使用**
+
+作用：为 react 函数组件提供副作用处理
+
+使用步骤：
+
+1. 导入 useEffect 函数
+2. 调用 useEffect 函数，并传入回调函数
+3. 在回调函数中编写副作用处理（dom 操作）
+4. 修改数据状态
+5. 检测副作用是否生效
+
+代码实现
+
+```js
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // dom操作
+    document.title = `当前已点击了${count}次`;
+  });
+  return (
+    <button
+      onClick={() => {
+        setCount(count + 1);
+      }}
+    >
+      {count}
+    </button>
+  );
+}
+
+export default App;
+```
+
+**3. 依赖项控制执行时机**
+
+1. 不添加依赖项
+
+```js
+// 组件首次渲染执行一次，以及不管是哪个状态更改引起组件更新时都会重新执行
+// 组件初始渲染
+// 组件更新 （不管是哪个状态引起的更新）
+
+useEffect(() => {
+  console.log('副作用执行了');
+});
+```
+
+2. 添加空数组
+
+```js
+// 组件只在首次渲染时执行一次
+
+useEffect(() => {
+  console.log('副作用执行了');
+}, []);
+```
+
+3. 添加特定依赖项
+
+```js
+// 副作用函数在首次渲染时执行，在依赖项发生变化时重新执行
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState('zs');
+
+  useEffect(() => {
+    console.log('副作用执行了');
+  }, [count]);
+
+  return (
+    <>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        {count}
+      </button>
+      <button
+        onClick={() => {
+          setName('cp');
+        }}
+      >
+        {name}
+      </button>
+    </>
+  );
+}
+```
+
+注意事项
+
+`useEffect` 回调函数中用到的数据（比如，count）就是依赖数据，就应该出现在依赖项数组中，如果不添加依赖项就会有 bug 出现
+
+**4. 清理副作用**
+
+```
+如果想要清理副作用 可以在副作用函数中的末尾return一个新的函数，在新的函数中编写清理副作用的逻辑
+注意执行时机为：
+1. 组件卸载时自动执行
+2. 组件更新时，下一个useEffect副作用函数执行之前自动执行
+```
+
+```js
+import { useEffect, useState } from 'react';
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setCount(count + 1);
+    }, 1000);
+    return () => {
+      // 用来清理副作用的事情
+      clearInterval(timerId);
+    };
+  }, [count]);
+  return <div>{count}</div>;
+};
+
+export default App;
+```
