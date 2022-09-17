@@ -115,3 +115,36 @@ export default App;
 **获取组件实例**
 
 函数组件由于没有实例，不能使用 ref 获取，如果想获取组件实例，必须是类组件
+
+```js
+//Foo.js
+class Foo extends React.Component {
+    sayHi = () => {
+        console.log('say hi')
+    }
+    render(){
+        return <div>Foo</div>
+    }
+}
+
+export default Foo
+
+
+
+//App.js
+import { useEffect, useRef } from 'react'
+import Foo from './Foo'
+
+function App() {
+    const h1Foo = useRef(null)
+    useEffect(() => {
+        console.log(h1Foo)
+    }, [])
+    return (
+        <div> <Foo ref={ h1Foo } /></div>
+    )
+}
+export default App
+```
+
+## useContext
