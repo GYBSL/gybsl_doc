@@ -54,3 +54,32 @@ function App() {
 
 export default App;
 ```
+
+## useEffect - 发送网络请求
+
+**使用场景**
+
+在 useEffect 中发送网络请求，并且封装同步 async await 操作
+
+**语法要求**
+
+不可以直接在 useEffect 的回调函数外层直接包裹 await ，因为异步会导致清理函数无法立即返回
+
+```js
+useEffect(async () => {
+  const res = await axios.get('http://xxx.net');
+  console.log(res);
+}, []);
+```
+
+**正确写法**
+
+在内部单独定义一个函数，然后把这个函数包装成同步
+
+```js
+useEffect(()=>{
+    async function fetchData(){
+       const res = await axios.get('http://geek.itheima.net/v1_0/channels')                            console.log(res)
+    }
+},[])
+```
