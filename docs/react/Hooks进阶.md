@@ -148,3 +148,9 @@ export default App
 ```
 
 ## useContext
+
+**实现步骤**
+
+1. 使用 createContext 创建 Context 对象
+2. 在顶层组件通过 Provider 提供数据
+3. 在底层组件通过 useContext 函数获取数据
