@@ -26,3 +26,31 @@ const [name, setName] = useState(() => {
 
 1. 如果就是初始化一个普通的数据 直接使用 useState(普通数据) 即可
 2. 如果要初始化的数据无法直接得到需要通过计算才能获取到，使用 useState(()=>{})
+
+**使用示例**
+
+```js
+import { useState } from 'react';
+
+function Counter(props) {
+  const [count, setCount] = useState(() => {
+    return props.count;
+  });
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Counter count={10} />
+      <Counter count={20} />
+    </>
+  );
+}
+
+export default App;
+```
