@@ -95,3 +95,19 @@ useEffect(()=>{
 1. 导入 useRef 函数
 2. 执行 useRef 函数并传入 null，返回值为一个对象 内部有一个 current 属性存放拿到的 dom 对象（组件实例）
 3. 通过 ref 绑定 要获取的元素或者组件
+
+```js
+import { useEffect, useRef } from 'react';
+function App() {
+  const h1Ref = useRef(null);
+  useEffect(() => {
+    console.log(h1Ref);
+  }, []);
+  return (
+    <div>
+      <h1 ref={h1Ref}>this is h1</h1>
+    </div>
+  );
+}
+export default App;
+```
