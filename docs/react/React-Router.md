@@ -143,3 +143,84 @@ navigate('/about', { replace: true });
     ```
 
 **6. 嵌套路由**
+
+实现步骤：
+
+1. App.js 中定义嵌套路由声明
+2. Layout 组件内部通过 `<Outlet/>` 指定二级路由出口
+
+```js
+// 1- App.js组件中定义路由嵌套关系
+
+<Routes>
+  <Route path="/" element={<Layout />}>
+    <Route path="board" element={<Board />} />
+    <Route path="article" element={<Article />} />
+  </Route>
+  {/* 省略部分  */}
+</Routes>
+```
+
+```js
+2- Layout.js组件中使用 Outlet 组件添加二级路由出口
+
+import { Outlet } from 'react-router-dom'
+
+const Layout = () => {
+  return (
+    <div>
+      layout
+      { /* 二级路由的path等于 一级path + 二级path  */ }
+      <Link to="/board">board</Link>
+      <Link to="/article">article</Link>
+      { /* 二级路由出口 */ }
+      <Outlet/>
+    </div>
+  )
+}
+export default Layout
+```
+
+**7. 默认二级路由**
+
+场景: 应用首次渲染完毕就需要显示的二级路由
+
+实现步骤:
+
+1. 给默认二级路由标记 index 属性
+2. 把原本的路径 path 属性去掉
+
+```js
+<Routes>
+  <Route path="/" element={<Layout />}>
+    <Route index element={<Board />} />
+    <Route path="article" element={<Article />} />
+  </Route>
+</Routes>
+```
+
+**8. 404 路由配置**
+
+> 场景：当 url 的路径在整个路由配置中都找不到对应的 path，使用 404 兜底组件进行渲染
+
+```js
+// 1- 准备一个NotFound组件
+const NotFound = () => {
+  return <div>this is NotFound</div>;
+};
+
+export default NotFound;
+```
+
+```js
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Board />} />
+      <Route path="article" element={<Article />} />
+    </Route>
+    // 通配符* 捕获404路由
+    <Route path="*" element={<NotFound />}></Route>
+  </Routes>
+</BrowserRouter>
+```
