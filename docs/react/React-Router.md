@@ -141,3 +141,5 @@ navigate('/about', { replace: true });
     let [params] = useParams()
     let id = params.id
     ```
+
+**6. 嵌套路由**
