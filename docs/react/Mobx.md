@@ -39,3 +39,21 @@ $ yarn add  mobx  mobx-react-lite
    2. 在构造器中实现数据响应式处理 makeAutoObservble
    3. 定义修改数据的函数 action
    4. 实例化 store 并导出
+
+```js
+import { makeAutoObservable } from 'mobx';
+
+class CounterStore {
+  count = 0; // 定义数据
+  constructor() {
+    makeAutoObservable(this); // 响应式处理
+  }
+  // 定义修改数据的方法
+  addCount = () => {
+    this.count++;
+  };
+}
+
+const counter = new CounterStore();
+export default counter;
+```
