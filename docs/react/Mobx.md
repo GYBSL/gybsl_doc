@@ -30,3 +30,12 @@ $ yarn add  mobx  mobx-react-lite
 ```
 
 **3. 基础使用**
+
+1. 初始化 mobx
+
+   初始化步骤:
+
+   1. 定义数据状态 state
+   2. 在构造器中实现数据响应式处理 makeAutoObservble
+   3. 定义修改数据的函数 action
+   4. 实例化 store 并导出
