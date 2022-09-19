@@ -20,3 +20,11 @@ order: 14
 1. 一个 create-react-app 创建好的 React 项目环境
 2. mobx 框架本身
 3. 一个用来链接 mobx 和 React 的中间件
+
+```base
+# 创建项目
+$ yarn create vite react-mobx --template react
+
+# 安装mobx和中间件工具 mobx-react-lite  只能函数组件中使用
+$ yarn add  mobx  mobx-react-lite
+```
