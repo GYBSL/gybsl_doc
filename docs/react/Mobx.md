@@ -310,3 +310,61 @@ export default observer(App);
 > 目标：当数据发生变化 所有用到数据的组件都会得到同步的组件的更新
 >
 > 实现步骤：在 Foo 组件和 Bar 组件中分别使用 store 中的数据，然后在 app 组件中进行数据修改，查看 Foo 组件和 Bar 组件是否得到更新
+
+```js
+// Bar.jsx
+
+// 用taskStore中的taskList数据
+import { useStore } from './store';
+import { observer } from 'mobx-react-lite';
+const Bar = () => {
+  const { taskStore } = useStore();
+  return (
+    <ul>
+      {taskStore.taskList.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default observer(Son);
+```
+
+```js
+// Foo.jsx
+
+// 用taskStore中的taskList数据
+import { useStore } from './store';
+import { observer } from 'mobx-react-lite';
+const Bar = () => {
+  const { taskStore } = useStore();
+  return (
+    <ul>
+      {taskStore.taskList.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default observer(Son);
+```
+
+```js
+// App.jsx
+
+import Bar from './Bar';
+import Foo from './Foo';
+import { useStore } from './store';
+function App() {
+  const { taskStore } = useStore();
+  return (
+    <div className="App">
+      <Bar />
+      <button onClick={() => taskStore.setTaskList('angular')}>修改taskStore</button>
+    </div>
+  );
+}
+export default App;
+```
