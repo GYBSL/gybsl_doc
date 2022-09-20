@@ -152,3 +152,53 @@ export default observer(App);
 1. 在mobx中编写异步请求方法 获取数据 存入state中
 2. 组件中通过 useEffect + 空依赖  触发action函数的执行
 ```
+
+```js
+// channelStore.js
+
+// 异步的获取
+
+import { makeAutoObservable } from 'mobx';
+import axios from 'axios';
+
+class ChannelStore {
+  channelList = [];
+  constructor() {
+    makeAutoObservable(this);
+  }
+  // 只要调用这个方法 就可以从后端拿到数据并且存入channelList
+  setChannelList = async () => {
+    const res = await axios.get('http://geek.itheima.net/v1_0/channels');
+    this.channelList = res.data.data.channels;
+  };
+}
+const channlStore = new ChannelStore();
+export default channlStore;
+```
+
+```js
+// App.js
+
+import { useEffect } from 'react';
+import { useStore } from './store';
+import { observer } from 'mobx-react-lite';
+function App() {
+  const { channlStore } = useStore();
+  // 1. 使用数据渲染组件
+  // 2. 触发action函数发送异步请求
+  useEffect(() => {
+    channlStore.setChannelList();
+  }, []);
+  return (
+    <ul>
+      {channlStore.channelList.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+}
+// 让组件可以响应数据的变化[也就是数据一变组件重新渲染]
+export default observer(App);
+```
+
+**6. 模块化**
