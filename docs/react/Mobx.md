@@ -83,4 +83,4 @@ function App() {
 export default observer(App);
 ```
 
-**4. React 使用 store**
+**4. 计算属性（衍生状态）**
