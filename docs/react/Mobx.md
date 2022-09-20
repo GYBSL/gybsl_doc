@@ -96,6 +96,8 @@ export default observer(App);
 ```
 
 ```js
+// counterStore.js
+
 import { computed, makeAutoObservable } from 'mobx';
 
 class CounterStore {
@@ -119,3 +121,27 @@ const counter = new CounterStore();
 
 export default counter;
 ```
+
+```js
+// app.js
+
+// 导入counterStore
+import counterStore from './store';
+// 导入observer方法
+import { observer } from 'mobx-react-lite';
+function App() {
+  return (
+    <div className="App">
+      {/* 原数组 */}
+      {JSON.stringify(counterStore.list)}
+      {/* 计算属性 */}
+      {JSON.stringify(counterStore.filterList)}
+      <button onClick={() => counterStore.changeList()}>change list</button>
+    </div>
+  );
+}
+// 包裹组件让视图响应数据变化
+export default observer(App);
+```
+
+**5. 异步数据处理**
