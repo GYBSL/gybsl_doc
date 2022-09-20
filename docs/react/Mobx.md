@@ -212,3 +212,97 @@ export default observer(App);
 2. 在store/index.js中导入拆分之后的模块，进行模块组合
 3. 利用React的context的机制导出统一的useStore方法，给业务组件使用
 ```
+
+```js
+// 1- 定义task模块
+
+import { makeAutoObservable } from 'mobx';
+
+class TaskStore {
+  taskList = [];
+  constructor() {
+    makeAutoObservable(this);
+  }
+  addTask() {
+    this.taskList.push('vue', 'react');
+  }
+}
+
+const task = new TaskStore();
+
+export default task;
+```
+
+```js
+// 2- 定义counterStore
+
+import { makeAutoObservable } from 'mobx';
+
+class CounterStore {
+  count = 0;
+  list = [1, 2, 3, 4, 5, 6];
+  constructor() {
+    makeAutoObservable(this);
+  }
+  addCount = () => {
+    this.count++;
+  };
+  changeList = () => {
+    this.list.push(7, 8, 9);
+  };
+  get filterList() {
+    return this.list.filter((item) => item > 4);
+  }
+}
+
+const counter = new CounterStore();
+
+export default counter;
+```
+
+```js
+// 3- 组合模块导出统一方法
+
+import React from 'react';
+
+import counter from './counterStore';
+import task from './taskStore';
+
+class RootStore {
+  constructor() {
+    this.counterStore = counter;
+    this.taskStore = task;
+  }
+}
+
+const rootStore = new RootStore();
+
+// context机制的数据查找链  Provider如果找不到 就找createContext方法执行时传入的参数
+const context = React.createContext(rootStore);
+
+const useStore = () => React.useContext(context);
+// useStore() =>  rootStore  { counterStore, taskStore }
+
+export { useStore };
+```
+
+```js
+// 4- 组件使用模块中的数据
+
+import { observer } from 'mobx-react-lite';
+// 导入方法
+import { useStore } from './store';
+function App() {
+  // 得到store
+  const store = useStore();
+  return (
+    <div className="App">
+      <button onClick={() => store.counterStore.addCount()}>{store.counterStore.count}</button>
+    </div>
+  );
+}
+// 包裹组件让视图响应数据变化
+export default observer(App);
+```
+
+**7. 多组件共享数据**
