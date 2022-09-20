@@ -145,3 +145,10 @@ export default observer(App);
 ```
 
 **5. 异步数据处理**
+
+```base
+实现步骤:
+
+1. 在mobx中编写异步请求方法 获取数据 存入state中
+2. 组件中通过 useEffect + 空依赖  触发action函数的执行
+```
