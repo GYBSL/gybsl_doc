@@ -82,3 +82,5 @@ function App() {
 // 包裹组件让视图响应数据变化
 export default observer(App);
 ```
+
+**4. React 使用 store**
